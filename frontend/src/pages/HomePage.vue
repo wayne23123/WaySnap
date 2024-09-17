@@ -1,5 +1,114 @@
-<script setup></script>
+<script setup>
+import TheIcon from '../components/TheIcon.vue';
+</script>
 
 <template>
-  <div>hi from HomePage</div>
+  <div class="content">
+    <div class="postList">
+      <div class="postItem" v-for="n in 10">
+        <img
+          src=""
+          alt=""
+          width="100%"
+          height="100%"
+          style="background: #eee"
+        />
+        <div class="postInfo">
+          <div class="postMeta">
+            <img class="avatar" src="" alt="" />
+            <span>name</span>
+            <span class="postPubDate">12小時前發布</span>
+            <div class="postActions">
+              <TheIcon icon="like" fill="none" stroke="#000000"> </TheIcon
+              ><span>1w</span>
+              <TheIcon icon="comment" fill="none" stroke="#000000"> </TheIcon
+              ><span>1w</span>
+              <TheIcon icon="favorite" fill="none" stroke="#000000"> </TheIcon
+              ><span>99w</span>
+            </div>
+          </div>
+          <div class="postDesc">
+            <p>description</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
+
+<style scoped>
+.content {
+  width: 80vw;
+  max-width: 1124px;
+  margin: 0 auto;
+  margin-top: 88px;
+}
+
+.postList {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+}
+
+.postItem {
+  box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.08);
+  border-radius: 8px;
+}
+
+.postInfo {
+  padding: 24px;
+}
+
+.postItem > img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  background: #eee;
+  cursor: pointer;
+}
+
+.postMeta {
+  display: grid;
+  grid-template-areas:
+    'avatar name actions'
+    'pubDate pubDate actions';
+  grid-template-columns: 42px 1fr 3fr;
+  row-gap: 6px;
+}
+
+.postMeta .avatar {
+  grid-area: avatar;
+  width: 34px;
+  height: 34px;
+  background: #eee;
+  border-radius: 50%;
+}
+
+.postMeta .postPubDate {
+  grid-area: pubDate;
+  color: #9f9f9f;
+  font-size: 14px;
+}
+
+.postActions {
+  grid-area: actions;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-items: center;
+  justify-self: end;
+  column-gap: 16px;
+  row-gap: 4px;
+}
+
+.postActions > svg {
+  width: 32px;
+  height: 32px;
+  grid-row: 1 / 2;
+  cursor: pointer;
+}
+
+.postDesc {
+  margin-top: 28px;
+  white-space: pre-line;
+}
+</style>
