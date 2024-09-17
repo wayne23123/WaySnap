@@ -16,7 +16,6 @@ import TheIcon from './TheIcon.vue';
 
 <style scoped>
 .postActions {
-  grid-area: actions;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   justify-items: center;

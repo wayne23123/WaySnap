@@ -2,6 +2,7 @@
 import TheIcon from '../components/TheIcon.vue';
 import TheAvatar from '../components/TheAvatar.vue';
 import PostDetails from '../components/PostDetails.vue';
+import PostActions from '../components/PostActions.vue';
 </script>
 
 <template>
@@ -20,14 +21,7 @@ import PostDetails from '../components/PostDetails.vue';
             <TheAvatar />
             <span>name</span>
             <span class="postPubDate">12小時前發布</span>
-            <div class="postActions">
-              <TheIcon icon="like" fill="none" stroke="#000000"> </TheIcon
-              ><span>1w</span>
-              <TheIcon icon="comment" fill="none" stroke="#000000"> </TheIcon
-              ><span>1w</span>
-              <TheIcon icon="favorite" fill="none" stroke="#000000"> </TheIcon
-              ><span>99w</span>
-            </div>
+            <PostActions />
           </div>
           <div class="postDesc">
             <p>description</p>
@@ -35,7 +29,7 @@ import PostDetails from '../components/PostDetails.vue';
         </div>
       </div>
     </div>
-    <PostDetails />
+    <!-- <PostDetails /> -->
   </div>
 </template>
 
@@ -91,19 +85,7 @@ import PostDetails from '../components/PostDetails.vue';
 
 .postActions {
   grid-area: actions;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
   justify-self: end;
-  column-gap: 16px;
-  row-gap: 4px;
-}
-
-.postActions > svg {
-  width: 32px;
-  height: 32px;
-  grid-row: 1 / 2;
-  cursor: pointer;
 }
 
 .postDesc {

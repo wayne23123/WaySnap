@@ -1,6 +1,7 @@
 <script setup>
 import TheAvatar from './TheAvatar.vue';
 import TheIcon from './TheIcon.vue';
+import PostActions from './PostActions.vue';
 </script>
 
 <template>
@@ -28,14 +29,7 @@ description
               </div>
             </div>
             <div class="actions">
-              <div class="postActions">
-                <TheIcon icon="like" />
-                <span>1w</span>
-                <TheIcon icon="comment" />
-                <span>1w</span>
-                <TheIcon icon="favorite" />
-                <span>99w</span>
-              </div>
+              <PostActions />
               <span class="postPubDate">12h</span>
               <input
                 type="text"
@@ -167,26 +161,8 @@ description
   row-gap: 16px;
 }
 
-.postActions {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
-  justify-self: end;
-  column-gap: 16px;
-  row-gap: 4px;
-}
-
-.postActions > svg {
-  width: 32px;
-  height: 32px;
-  transform: scale(0.8125);
-  grid-row: 1/2;
-  stroke: #000;
-  cursor: pointer;
-}
-
-.postActions > span {
-  font-size: 14px;
+.postActions > :deep(svg) {
+  transform: scale(0.8);
 }
 
 .postPubDate {
