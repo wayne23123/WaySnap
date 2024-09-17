@@ -1,5 +1,6 @@
 <script setup>
 import TheIcon from '../components/TheIcon.vue';
+import TheAvatar from '../components/TheAvatar.vue';
 </script>
 
 <template>
@@ -15,7 +16,7 @@ import TheIcon from '../components/TheIcon.vue';
         />
         <div class="postInfo">
           <div class="postMeta">
-            <img class="avatar" src="" alt="" />
+            <TheAvatar />
             <span>name</span>
             <span class="postPubDate">12小時前發布</span>
             <div class="postActions">
@@ -78,10 +79,6 @@ import TheIcon from '../components/TheIcon.vue';
 
 .postMeta .avatar {
   grid-area: avatar;
-  width: 34px;
-  height: 34px;
-  background: #eee;
-  border-radius: 50%;
 }
 
 .postMeta .postPubDate {

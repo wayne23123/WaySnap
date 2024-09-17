@@ -1,5 +1,6 @@
 <script setup>
 import TheIcon from './TheIcon.vue';
+import TheAvatar from './TheAvatar.vue';
 </script>
 
 <template>
@@ -16,13 +17,7 @@ import TheIcon from './TheIcon.vue';
       </button>
 
       <div class="profileDropDown">
-        <img
-          src="../assets/avatarDefault.png"
-          width="42"
-          height="42"
-          style="background: #ccc"
-          alt=""
-        />
+        <TheAvatar :width="42" :height="42" />
         <!-- <div class="dropdownMenu">
           <ul class="profileMenu">
             <li><router-link to="/profile">个人主页</router-link></li>
@@ -83,6 +78,7 @@ import TheIcon from './TheIcon.vue';
 
 .profileDropDown {
   position: relative;
+  cursor: pointer;
 }
 
 .profileMenu {
