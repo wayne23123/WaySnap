@@ -1,6 +1,7 @@
 <script setup>
 import './assets/base.css';
 import NavBar from './components/NavBar.vue';
+import TheLayout from './components/TheLayout.vue';
 </script>
 
 <template>
@@ -8,7 +9,9 @@ import NavBar from './components/NavBar.vue';
     <NavBar></NavBar>
   </header>
 
-  <router-view></router-view>
+  <TheLayout>
+    <router-view></router-view>
+  </TheLayout>
 </template>
 
 <style scoped>

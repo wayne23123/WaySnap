@@ -7,7 +7,7 @@ import PostUpload from '../components/PostUpload.vue';
 </script>
 
 <template>
-  <div class="content">
+  <div>
     <div class="postList">
       <div class="postItem" v-for="n in 10">
         <img
@@ -31,18 +31,11 @@ import PostUpload from '../components/PostUpload.vue';
       </div>
     </div>
     <!-- <PostDetails /> -->
-    <PostUpload />
+    <!-- <PostUpload /> -->
   </div>
 </template>
 
 <style scoped>
-.content {
-  width: 80vw;
-  max-width: 1124px;
-  margin: 0 auto;
-  margin-top: 88px;
-}
-
 .postList {
   display: grid;
   grid-template-columns: 1fr 1fr;
