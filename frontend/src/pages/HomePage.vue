@@ -1,6 +1,7 @@
 <script setup>
 import TheIcon from '../components/TheIcon.vue';
 import TheAvatar from '../components/TheAvatar.vue';
+import PostDetails from '../components/PostDetails.vue';
 </script>
 
 <template>
@@ -34,6 +35,7 @@ import TheAvatar from '../components/TheAvatar.vue';
         </div>
       </div>
     </div>
+    <PostDetails />
   </div>
 </template>
 
