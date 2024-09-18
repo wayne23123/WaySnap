@@ -29,11 +29,11 @@ defineProps({
   font-size: 16px;
 }
 
-.button .primary {
+.primary {
   background: #1da0ff;
 }
 
-.button .reverse {
+.reverse {
   background: none;
   border: 1px solid #e8e8e8;
   color: initial;

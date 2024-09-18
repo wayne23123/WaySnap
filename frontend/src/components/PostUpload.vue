@@ -1,3 +1,8 @@
+<script setup>
+import TheIcon from './TheIcon.vue';
+import TheButton from './TheButton.vue';
+</script>
+
 <template>
   <Teleport to="body">
     <div class="modal">
@@ -14,17 +19,13 @@
               placeholder="寫下你的想法..."
               class="postContentInput"
             ></textarea>
-            <button class="pubBtn button">發布</button>
+            <TheButton class="pubBtn">發布</TheButton>
           </div>
         </div>
       </div>
     </div>
   </Teleport>
 </template>
-
-<script setup>
-import TheIcon from './TheIcon.vue';
-</script>
 
 <style scoped>
 .modal {
@@ -115,14 +116,5 @@ import TheIcon from './TheIcon.vue';
   position: relative;
   right: 24px;
   bottom: 18px;
-}
-
-.button {
-  border-radius: 8px;
-  padding: 10px 32px;
-  border: none;
-  color: white;
-  background: #1da0ff;
-  font-size: 16px;
 }
 </style>

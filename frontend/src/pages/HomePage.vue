@@ -15,6 +15,6 @@ import PostItem from '../components/PostItem.vue';
     </PostList>
 
     <!-- <PostDetails /> -->
-    <!-- <PostUpload /> -->
+    <PostUpload />
   </div>
 </template>
