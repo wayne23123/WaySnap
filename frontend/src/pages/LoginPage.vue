@@ -1,3 +1,5 @@
+<script setup></script>
+
 <template>
   <div class="loginPage">
     <img src="" alt="" class="phoneImage" />
@@ -12,7 +14,7 @@
     </div>
   </div>
 </template>
-<script setup></script>
+
 <style scoped>
 .loginPage {
   display: grid;
